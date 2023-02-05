@@ -1,11 +1,21 @@
 <h1>Rick And Morty Characters</h1>
+<div class="form-container" (submit)="filter($event)">
+    <form>
+        <input type="text" placeholder="Filter" name="filter" [(ngModel)]="filterValue">
+        <button type="submit">Search</button>
+        <button class="contrast" (click)="reset()" type="reset">Reset</button>
+    </form>
+</div>
+
 <ul>
     <li *ngFor="let character of characters; index as i;">
         <article>
             <h3>{{character.name}}</h3>
             <h4>Specie: {{character.species}}</h4>
             <h4>Status: {{character.status}}</h4>
-            <img src={{character.image}} alt={{character.name}}>
+            <img [src]="character.image" [alt]="character.name">
         </article>
     </li>
+    
+    <li *ngIf="!characters.length">No character matches this input</li>
 </ul>

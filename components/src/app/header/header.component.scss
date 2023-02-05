@@ -3,3 +3,9 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
+nav {
+    @media screen and (width < 1000px) {
+        display: none;
+    }
+}

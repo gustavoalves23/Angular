@@ -6,7 +6,14 @@ h1 {
     -webkit-text-fill-color: transparent;
     text-align: center;
     padding: 20px;
-} 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 
 ul {
     display: grid;
