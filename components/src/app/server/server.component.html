@@ -1,1 +1,11 @@
-<h1>Server Component</h1>
+<h1>Rick And Morty Characters</h1>
+<ul>
+    <li *ngFor="let character of characters; index as i;">
+        <article>
+            <h3>{{character.name}}</h3>
+            <h4>Specie: {{character.species}}</h4>
+            <h4>Status: {{character.status}}</h4>
+            <img src={{character.image}} alt={{character.name}}>
+        </article>
+    </li>
+</ul>
