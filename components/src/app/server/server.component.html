@@ -15,9 +15,9 @@
 <h2 *ngIf="!characters.length; else hasCharacters">No character matches this input</h2>
 <ng-template #hasCharacters>
     <ul>
-        <li *ngFor="let character of characters; index as i;">
+        <li *ngFor="let character of characters; index as i">
             <article [ngStyle]="{backgroundColor: getBgColor(character)}">
-                <h3>{{character.name}}</h3>
+                <h3>{{i + 1}}. {{character.name}}</h3>
                 <h4>Specie: {{character.species}}</h4>
                 <h4>Status: {{character.status}}</h4>
                 <img [src]="character.image" [alt]="character.name">
