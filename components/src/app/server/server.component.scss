@@ -42,3 +42,22 @@ ul {
 li {
     list-style: none;
 }
+
+article {
+    transition-duration: .3s;
+    pointer-events: auto;
+    transition-property: opacity;
+}
+
+
+
+
+ul {
+    &:has(article:hover)>li:not(:has(article:hover))>article {
+        opacity: .1;
+    }
+}
+
+label[for="toggleHighlight"] {
+    text-align: center;
+}
